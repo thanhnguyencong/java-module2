@@ -5,6 +5,7 @@ import inheritance.java.codegym.Shape;
 class Circle extends Shape {
 
     double radius = 1.0;
+    boolean fill = true;
 
 
     Circle(double radius) {

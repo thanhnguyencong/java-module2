@@ -4,9 +4,8 @@ public class PalindromeQueue {
     String string;
 
 
-    public Palindrome(String string) {
+    public PalindromeQueue(String string) {
         this.string = string;
-
     }
 
     public String getString() {
