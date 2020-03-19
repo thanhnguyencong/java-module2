@@ -30,6 +30,23 @@ public class Support {
             }
         }
     }
-
+    public void showHashMap(HashMap<String, String> dictionary) {
+        for (HashMap.Entry<String, String> entry : dictionary.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            System.out.println(key + " = " + value);
+        }
+    }
+    public void showSuggestions(String stringKey, HashMap<String, String> dictionary) {
+        String regex = stringKey + "(.*)";
+        Pattern pattern = Pattern.compile(regex);
+        for (HashMap.Entry<String, String> entry : dictionary.entrySet()) {
+            String key = entry.getKey();
+            Matcher matcher = pattern.matcher(key);
+            if (matcher.find()){
+                System.out.println(key);
+            }
+        }
+    }
 }
 
